@@ -1,0 +1,21 @@
+@import "minima";
+
+.language-switcher {
+  float: right;
+  margin-top: 1rem;
+  
+  a, span {
+    margin-left: 0.5rem;
+    text-decoration: none;
+    color: $text-color;
+    
+    &:hover {
+      color: $brand-color;
+    }
+  }
+  
+  .current-lang {
+    font-weight: bold;
+    color: $brand-color;
+  }
+} 
