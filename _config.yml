@@ -21,9 +21,7 @@
 title: Poliklinika Jelovac
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Your trusted healthcare provider in the community. We provide quality healthcare and professional service to all our patients.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -32,15 +30,6 @@ languages: ["hr", "en"]
 default_lang: "hr"
 exclude_from_localizations: ["javascript", "images", "css"]
 
-# Collections for different languages
-collections:
-  hr:
-    output: true
-    permalink: /:collection/:path/
-  en:
-    output: true
-    permalink: /:collection/:path/
-
 # Build settings
 theme: minima
 plugins:
@@ -48,16 +37,29 @@ plugins:
 
 # Navigation
 header_pages:
-  - _hr/index.markdown
-  - _hr/about.markdown
-  - _en/index.markdown
-  - _en/about.markdown
+  - pages/hr/about.markdown
+  - pages/hr/services.markdown
+  - pages/en/about.markdown
+  - pages/en/services.markdown
 
 # Exclude from processing
 exclude:
   - _en/_posts
   - _hr/_posts
   - index.html
+
+# Defaults for all pages
+defaults:
+  - scope:
+      path: "pages/hr"
+      type: pages
+    values:
+      lang: hr
+  - scope:
+      path: "pages/en"
+      type: pages
+    values:
+      lang: en
 
 # Exclude from processing.
 # The following items will not be processed, by default.

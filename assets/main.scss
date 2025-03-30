@@ -1,7 +1,12 @@
 @import "minima";
 
+.navigation{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .language-switcher {
-  float: right;
   margin-top: 1rem;
   
   a, span {
