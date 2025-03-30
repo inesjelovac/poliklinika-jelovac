@@ -20,6 +20,8 @@
 
 title: Poliklinika Jelovac
 email: your-email@example.com
+phone: +385 052 686 645
+address: Kmačići 22a, 52444 Tinjan
 description: >- # this means to ignore newlines until "baseurl:"
   Your trusted healthcare provider in the community. We provide quality healthcare and professional service to all our patients.
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -36,11 +38,12 @@ plugins:
 
 # Navigation
 header_pages:
-  - pages/hr/about.markdown
   - pages/hr/services.markdown
-  - pages/en/about.markdown
+  - pages/hr/contact.html
+  - pages/hr/about.markdown
   - pages/en/services.markdown
-
+  - pages/en/contact.html
+  - pages/en/about.markdown
 # Exclude from processing
 exclude:
   - _en/_posts
