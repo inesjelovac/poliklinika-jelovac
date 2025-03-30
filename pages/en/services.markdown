@@ -5,6 +5,10 @@ lang: en
 permalink: /en/services/
 ---
 
+<div class="services-hero">
+  <img src="{{ '/assets/services.jpg' | relative_url }}" alt="Medical team at work" class="hero-image">
+</div>
+
 
 # General Medicine
 

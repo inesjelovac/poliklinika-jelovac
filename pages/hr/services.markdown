@@ -5,6 +5,10 @@ lang: hr
 permalink: /hr/services/
 ---
 
+<div class="services-hero">
+  <img src="{{ '/assets/services.jpg' | relative_url }}" alt="Medical team at work" class="hero-image">
+</div>
+
 # Opća medicina
 - Preventivni pregledi
 - Dijagnostika i liječenje
