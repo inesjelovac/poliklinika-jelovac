@@ -28,7 +28,6 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Language settings
 languages: ["hr", "en"]
 default_lang: "hr"
-exclude_from_localizations: ["javascript", "images", "css"]
 
 # Build settings
 theme: minima
@@ -46,7 +45,6 @@ header_pages:
 exclude:
   - _en/_posts
   - _hr/_posts
-  - index.html
 
 # Defaults for all pages
 defaults:
