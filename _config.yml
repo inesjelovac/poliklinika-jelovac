@@ -29,6 +29,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Language settings
 languages: ["hr", "en"]
+language_icons: {
+  hr: "/assets/lang-hr.png",
+  en: "/assets/lang-uk.png"
+}
 default_lang: "hr"
 
 # Build settings

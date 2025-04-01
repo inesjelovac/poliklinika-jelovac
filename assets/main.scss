@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "minima";
 
 .language-switcher {
@@ -12,18 +13,24 @@
     margin-left: 0.5rem;
     text-decoration: none;
     color: $text-color;
+    display: flex;
+    align-items: center;
     
     &:hover {
       color: $brand-color;
     }
-  }
-  
-  .current-lang {
-    font-weight: bold;
-    color: $brand-color;
+
+    &.current-lang {
+      font-weight: bold;
+      color: $brand-color;
+    }
+
+    .lang-icon {
+      height: 18px;
+      margin-right: 4px;
+      vertical-align: middle;
+      object-fit: contain;
+    }
   }
 } 
 
-.another {
-  color: red;
-}

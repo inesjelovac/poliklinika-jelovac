@@ -6,11 +6,17 @@
       <div class="language-switcher">
         {% for lang in site.languages %}
           {% if lang == page.lang %}
-            <span class="current-lang">{{ lang | upcase }}</span>
+            <span class="current-lang">
+              <img src="{{ site.language_icons[lang] }}" alt="{{ lang | upcase }}" class="lang-icon">
+              {{ lang | upcase }}
+            </span>
           {% else %}
             {% assign path_parts = page.url | split: '/' %}
             {% assign path_without_lang = path_parts | slice: 2, path_parts.size | join: '/' %}
-            <a href="/{{ lang }}/{{ path_without_lang }}">{{ lang | upcase }}</a>
+            <a href="/{{ lang }}/{{ path_without_lang }}">
+              <img src="{{ site.language_icons[lang] }}" alt="{{ lang | upcase }}" class="lang-icon">
+              {{ lang | upcase }}
+            </a>
           {% endif %}
         {% endfor %}
       </div>
