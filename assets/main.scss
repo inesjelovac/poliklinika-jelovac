@@ -34,3 +34,45 @@
   }
 } 
 
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0;
+  
+  iframe {
+    max-width: 100%;
+  }
+}
+
+.home-services {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 2rem;
+  margin: 2rem 0;
+
+  div {
+    flex: 1;
+    
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    flex-direction: column;
+    
+    div {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  .doctor-image {
+    padding-top: 1rem;
+  }
+}
+

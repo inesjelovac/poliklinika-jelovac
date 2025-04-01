@@ -17,4 +17,4 @@ Your trusted healthcare provider in the community. We provide quality healthcare
 
 ## Contact
 
-For more information about our services or to schedule an appointment, please contact us. 
+{% include contact-section.html %}

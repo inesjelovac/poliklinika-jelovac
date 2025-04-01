@@ -5,15 +5,18 @@ lang: hr
 permalink: /hr/about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Poliklinika Jelovac specijalizirana je za **ranu dijagnostiku** i **prevenciju** zloćudnih bolesti.
+Suvremena medicinska oprema, godine iskustva i kontinuirano obrazovanje omogućuju nam pružanje
+najbolje dijagnostike i uspješnu prevenciju zloćudnih bolesti.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Od 1991. u poliklinici pružamo usluge ultrazvučne i intervencijske dijagnostike, kliničke i sistematske preglede, Color Doppler i usluge elektrokardiografije.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+## Sistematski pregledi
 
+Pravodobna dijagnoza daje šansu za kvalitetno brzo liječenje i izlječenje bez većih trauma za organizam. Stoga preporučujemo obavljanje preventivnih sistematskih pregleda svake godine, čak i ako nemate nikakvih smetnji.
+ 
+Osnovni sistematski pregled uključuje: klinički pregled, EKG, laboratorijsku dijagnostiku, ultrazvuk abdomena, ultrazvuk dojki te ostale preglede, ovisno o dogovoru s pacijentom.
 
-[jekyll-organization]: https://github.com/jekyll
+## Dr. med. Nedjeljko Jelovac
+
+![Dr. med. Nedjeljko Jelovac](/assets/images/dr-jelovac-3.jpg)
