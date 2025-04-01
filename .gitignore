@@ -5,3 +5,5 @@ _site
 vendor
 
 spec/examples.txt
+
+.DS_Store
