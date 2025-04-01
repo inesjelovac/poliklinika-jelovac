@@ -1,13 +1,12 @@
+---
+---
 @import "minima";
-
-.navigation{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .language-switcher {
   margin-top: 1rem;
+  display: flex;
+  align-items: right;
+  width: 100%;
   
   a, span {
     margin-left: 0.5rem;
@@ -24,3 +23,7 @@
     color: $brand-color;
   }
 } 
+
+.another {
+  color: red;
+}
