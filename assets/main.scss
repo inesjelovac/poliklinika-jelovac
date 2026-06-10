@@ -134,13 +134,9 @@ a {
 
   @include media-query($on-palm) {
     border-left: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid $grey-color-light;
     margin-left: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    justify-content: flex-end;
+    padding: 5px 10px 5px 30px;
 
     a, span {
       color: $text-color;
