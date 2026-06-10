@@ -32,9 +32,13 @@ description: >- # this means to ignore newlines until "baseurl:"
 descriptions:
   hr: Vaš pouzdani pružatelj zdravstvenih usluga u zajednici. Pružamo kvalitetnu zdravstvenu skrb i profesionalnu uslugu svim našim pacijentima s fokusom na ultrazvuk, color doppler, dijagnostiku i prevenciju.
   en: Your trusted healthcare provider in the community. We provide quality healthcare and professional service to all our patients, focusing on ultrasound, colour doppler, diagnostics and prevention.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "" # SET THIS to your production domain, e.g. https://www.poliklinika-jelovac.hr
 author: 🩺 dr.med. Nedjeljko Jelovac
+
+keywords:
+  hr: "ultrazvuk, color doppler, dijagnostika, prevencija, poliklinika, dr. Jelovac, Tinjan, Istra, rana dijagnostika, zloćudne bolesti"
+  en: "ultrasound, colour doppler, diagnostics, prevention, polyclinic, dr. Jelovac, Tinjan, Istria, early diagnostics, cancer prevention"
 
 # Language settings
 languages: ["hr", "en"]
@@ -48,6 +52,7 @@ default_lang: "hr"
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
 
 # Navigation
 header_pages:

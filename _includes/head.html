@@ -2,16 +2,85 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }} - Ultrazvuk, Color Doppler, dijagnostika i prevencija">
-  <meta name="keywords" content="ultrazvuk, color doppler, dijagnostika, prevencija, medicinska dijagnostika">
 
+  {%- assign site_title = site.titles[page.lang] | default: site.title -%}
+  {%- assign meta_description = page.description | default: site.descriptions[page.lang] | default: site.description -%}
+  {%- assign is_home = false -%}
+  {%- if page.url == '/hr/' or page.url == '/en/' -%}{%- assign is_home = true -%}{%- endif -%}
+
+  <!-- Title -->
+  {%- if is_home or page.title == blank -%}
+  <title>{{ site_title | escape }}</title>
+  {%- else -%}
+  <title>{{ page.title | escape }} | {{ site_title | escape }}</title>
+  {%- endif -%}
+
+  <!-- Meta -->
+  <meta name="description" content="{{ meta_description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="keywords" content="{{ site.keywords[page.lang] | escape }}">
+  <meta name="author" content="{{ site.author | escape }}">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+
+  <!-- hreflang — tells Google which pages are language equivalents -->
+  {%- assign path_parts = page.url | split: '/' -%}
+  {%- assign path_without_lang = path_parts | slice: 2, path_parts.size | join: '/' -%}
+  {%- for lang in site.languages -%}
+  <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}/{{ lang }}/{{ path_without_lang }}">
+  {%- endfor -%}
+  <link rel="alternate" hreflang="x-default" href="{{ site.url }}/{{ site.default_lang }}/{{ path_without_lang }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <meta property="og:title" content="{%- if is_home -%}{{ site_title | escape }}{%- else -%}{{ page.title | escape }} | {{ site_title | escape }}{%- endif -%}">
+  <meta property="og:description" content="{{ meta_description | strip_html | normalize_whitespace | truncate: 200 | escape }}">
+  <meta property="og:image" content="{{ site.url }}/assets/images/dr-jelovac-1.jpg">
+  <meta property="og:site_name" content="{{ site_title | escape }}">
+  {%- if page.lang == 'hr' -%}
+  <meta property="og:locale" content="hr_HR">
+  {%- else -%}
+  <meta property="og:locale" content="en_GB">
+  {%- endif -%}
+
+  <!-- Structured data: MedicalClinic -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Poliklinika Jelovac",
+    "alternateName": "Polyclinic Jelovac",
+    "url": "{{ site.url }}/{{ page.lang }}/",
+    "telephone": "{{ site.phone }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kmačići 22a",
+      "postalCode": "52444",
+      "addressLocality": "Tinjan",
+      "addressRegion": "Istarska županija",
+      "addressCountry": "HR"
+    },
+    "openingHours": [
+      "Mo We 15:00-19:00",
+      "Tu Th Fr 08:00-13:00"
+    ],
+    "medicalSpecialty": [
+      "Radiology",
+      "InternalMedicine"
+    ],
+    "description": "{{ site.descriptions.en | strip_html | normalize_whitespace | escape }}"
+  }
+  </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Assets -->
   <link rel="shortcut icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
-</head> 
+  <link rel="alternate" type="application/rss+xml" title="{{ site_title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+</head>
