@@ -3,6 +3,62 @@
 
 @import "minima";
 
+// ── Typography ────────────────────────────────────────────────────────────────
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #1d3040;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  color: #2389b0;
+}
+
+a {
+  color: #2389b0;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// ── Header & footer background ────────────────────────────────────────────────
+
+.light-blue-background {
+  background-color: #1a5f7a;
+}
+
+// ── Header ────────────────────────────────────────────────────────────────────
+
+.site-header {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: none;
+
+  .site-title,
+  .site-title:visited {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+    }
+  }
+}
+
+// ── Nav ───────────────────────────────────────────────────────────────────────
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -12,22 +68,44 @@
     align-items: center;
   }
 
+  .page-link {
+    color: #ffffff;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   @include media-query($on-palm) {
     display: block;
+
+    .page-link {
+      color: $text-color;
+    }
   }
 }
+
+// ── Language switcher ─────────────────────────────────────────────────────────
 
 .language-switcher {
   display: flex;
   align-items: center;
-  border-left: 1px solid $grey-color-light;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
   margin-left: 0.75rem;
   padding-left: 0.75rem;
 
   a, span {
     margin-left: 0.4rem;
     text-decoration: none;
-    color: $text-color;
+    color: rgba(255, 255, 255, 0.8);
     display: flex;
     align-items: center;
     font-size: 0.875rem;
@@ -37,12 +115,13 @@
     }
 
     &:hover {
-      color: $brand-color;
+      color: #ffffff;
+      text-decoration: none;
     }
 
     &.current-lang {
       font-weight: bold;
-      color: $brand-color;
+      color: #ffffff;
     }
 
     .lang-icon {
@@ -55,15 +134,190 @@
 
   @include media-query($on-palm) {
     border-left: none;
-    border-top: 1px solid $grey-color-light;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     margin-left: 0;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     justify-content: flex-end;
+
+    a, span {
+      color: $text-color;
+
+      &.current-lang {
+        color: $brand-color;
+      }
+    }
   }
 }
+
+// ── Footer ────────────────────────────────────────────────────────────────────
+
+.site-footer {
+  border-top: none;
+
+  a {
+    color: #ffffff;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.75);
+      text-decoration: none;
+    }
+  }
+
+  .footer-col-wrapper,
+  .footer-heading {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  p, li {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  strong {
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+// ── Hero ──────────────────────────────────────────────────────────────────────
+
+.hero {
+  background-image: url('/assets/home.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  margin-left: -$spacing-unit;
+  margin-right: -$spacing-unit;
+  margin-bottom: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(26, 95, 122, 0.72);
+  }
+
+  @include media-query($on-palm) {
+    min-height: 280px;
+    margin-left: -($spacing-unit / 2);
+    margin-right: -($spacing-unit / 2);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 3rem $spacing-unit;
+  max-width: 680px;
+
+  h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  @include media-query($on-palm) {
+    padding: 2rem ($spacing-unit / 2);
+
+    h1 {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+.btn-outline {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover {
+    background: #ffffff;
+    color: #1a5f7a;
+    text-decoration: none;
+  }
+}
+
+// ── Home services block ───────────────────────────────────────────────────────
+
+.home-services {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 2rem;
+  background-color: #f4fafd;
+  margin-left: -$spacing-unit;
+  margin-right: -$spacing-unit;
+  margin-bottom: 2rem;
+  padding: 2.5rem $spacing-unit;
+
+  div {
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  ul li {
+    list-style: none;
+    padding-left: 1.2rem;
+    position: relative;
+
+    &::before {
+      content: '■';
+      position: absolute;
+      left: 0;
+      color: #2389b0;
+      font-size: 0.5rem;
+      top: 0.45em;
+    }
+  }
+
+  .doctor-image {
+    padding-top: 1rem;
+  }
+
+  @media screen and (max-width: 580px) {
+    flex-direction: column;
+    margin-left: -($spacing-unit / 2);
+    margin-right: -($spacing-unit / 2);
+    padding: 1.5rem ($spacing-unit / 2);
+
+    div {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+// ── Content images (About page doctor photo) ──────────────────────────────────
+
+.page-content img {
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+}
+
+// ── Map ───────────────────────────────────────────────────────────────────────
 
 .map-container {
   display: flex;
@@ -71,43 +325,8 @@
   align-items: center;
   width: 100%;
   margin: 2rem 0;
-  
+
   iframe {
     max-width: 100%;
   }
 }
-
-.home-services {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  gap: 2rem;
-  margin: 2rem 0;
-
-  div {
-    flex: 1;
-    
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  @media screen and (max-width: 580px) {
-    flex-direction: column;
-    
-    div {
-      width: 100%;
-      padding: 0;
-    }
-  }
-
-  .doctor-image {
-    padding-top: 1rem;
-  }
-}
-
-.light-blue-background {
-  background-color: #f0f8ff;
-}
-
