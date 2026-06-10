@@ -19,6 +19,9 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Poliklinika Jelovac
+titles:
+  hr: Poliklinika Jelovac
+  en: Polyclinic Jelovac
 # email: your-email@example.com
 phone: +385 52 686 645
 mobile: +385 91 166 8801
@@ -26,6 +29,9 @@ address: Kmačići 22a, 52444 Tinjan
 description: >- # this means to ignore newlines until "baseurl:"
   Your trusted healthcare provider in the community. We provide quality healthcare and professional service to all our patients
   focusing on ultrasound, color doppler, diagnostics and prevention.
+descriptions:
+  hr: Vaš pouzdani pružatelj zdravstvenih usluga u zajednici. Pružamo kvalitetnu zdravstvenu skrb i profesionalnu uslugu svim našim pacijentima s fokusom na ultrazvuk, color doppler, dijagnostiku i prevenciju.
+  en: Your trusted healthcare provider in the community. We provide quality healthcare and professional service to all our patients, focusing on ultrasound, colour doppler, diagnostics and prevention.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 author: 🩺 dr.med. Nedjeljko Jelovac

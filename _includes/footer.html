@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li><a href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+          <li>{{ site.address | escape }}</li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="contact-list">
+          {%- if page.lang == 'hr' -%}
+          <li>Pon, Sri: 15:00 – 19:00</li>
+          <li>Uto, Čet, Pet: 08:00 – 13:00</li>
+          <li>Sub, Ned: Zatvoreno</li>
+          {%- else -%}
+          <li>Mon, Wed: 15:00 – 19:00</li>
+          <li>Tue, Thu, Fri: 08:00 – 13:00</li>
+          <li>Sat, Sun: Closed</li>
+          {%- endif -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>&copy; {{ 'now' | date: "%Y" }} {{ site.titles[page.lang] | default: site.title | escape }}</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
