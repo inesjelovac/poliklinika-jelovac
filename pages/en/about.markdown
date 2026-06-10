@@ -7,8 +7,6 @@ permalink: /en/about/
 
 _Polyclinic Jelovac specialises in **early diagnostics** and **prevention** of malignant diseases. State-of-the-art medical equipment, years of experience and continuous education allow us to provide the best diagnostics and successful prevention of malignant diseases._
 
----
-
 
 Years of experience, continuous education and state-of-the-art medical equipment enable the best diagnostics and prevention of malignant diseases.
 

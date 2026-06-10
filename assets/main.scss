@@ -311,6 +311,17 @@ a {
   }
 }
 
+// ── Intro summary callout (italic-only paragraph) ────────────────────────────
+
+.page-content p:has(> em:only-child) {
+  border-left: 3px solid #2389b0;
+  background: #f4fafd;
+  padding: 0.9rem 1.25rem;
+  border-radius: 0 4px 4px 0;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
 // ── Content images (About page doctor photo) ──────────────────────────────────
 
 .page-content img {

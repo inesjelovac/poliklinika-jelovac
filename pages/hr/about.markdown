@@ -7,8 +7,6 @@ permalink: /hr/about/
 
 _Poliklinika Jelovac specijalizirana je za **ranu dijagnostiku** i **prevenciju** zloćudnih bolesti. Suvremena medicinska oprema, godine iskustva i kontinuirano obrazovanje omogućuju nam pružanje ajbolje dijagnostike i uspješnu prevenciju zloćudnih bolesti._
 
----
-
 
 Godine iskustva, kontinuirano obrazovanje i suvremena medicinska oprema omogućavaju najbolju dijagnostiku i prevenciju zloćudnih bolesti.
 
