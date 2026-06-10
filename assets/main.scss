@@ -198,7 +198,7 @@ a {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(26, 95, 122, 0.72);
+    background: rgba(26, 95, 122, 0.50);
   }
 
   @include media-query($on-palm) {
@@ -239,8 +239,9 @@ a {
 .btn-outline {
   display: inline-block;
   padding: 0.65rem 1.5rem;
+  background: #ffffff;
   border: 2px solid #ffffff;
-  color: #ffffff;
+  color: #1a5f7a;
   font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -250,8 +251,8 @@ a {
   transition: background 0.2s, color 0.2s;
 
   &:hover {
-    background: #ffffff;
-    color: #1a5f7a;
+    background: transparent;
+    color: #ffffff;
     text-decoration: none;
   }
 }
