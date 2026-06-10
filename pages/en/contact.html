@@ -5,29 +5,25 @@ lang: en
 permalink: /en/contact/
 ---
 
-<h1>Get in Touch</h1>
+<h1>Contact Us</h1>
 
-<p>We are here to help you with any questions or concerns you may have about our services. Feel free to reach out to us through any of the following methods:</p>
+<p>We are here to help you with any questions or concerns you may have about our services. Feel free to reach out to us!</p>
 
 <h2>Contact Information</h2>
 
 <ul>
-    <li><strong>Address:</strong> {{ site.address }}</li>
-    <li><strong>Phone:</strong> {{ site.phone }}</li>
-    <li><strong>Email:</strong> [Your Email Address]</li>
+    <li><strong>Phone:</strong> <a href="tel:{{ site.phone }}">{{ site.phone }}</a></li>
+    <li><strong>Mobile:</strong> <a href="tel:{{ site.mobile }}">{{ site.mobile }}</a></li>
     <li><strong>Working Hours:</strong>
         <ul>
-            <li>Monday - Friday: 8:00 AM - 8:00 PM</li>
-            <li>Saturday: 9:00 AM - 2:00 PM</li>
-            <li>Sunday: Closed</li>
+            <li>Monday, Wednesday: 15:00 - 19:00</li>
+            <li>Tuesday, Thursday, Friday: 08:00 - 13:00</li>
+            <li>Saturday, Sunday: Closed</li>
         </ul>
     </li>
+    <li><strong>Address:</strong> {{ site.address }}</li>
 </ul>
 
 <h2>Location</h2>
 
 {% include map.html %}
-
-<h2>Emergency Contact</h2>
-
-<p>For medical emergencies, please call emergency services at 112 or visit the nearest emergency room.</p> 
