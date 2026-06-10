@@ -1,0 +1,36 @@
+---
+layout: none
+permalink: /llms.txt
+---
+# Poliklinika Jelovac / Polyclinic Jelovac
+
+> A private medical clinic in Tinjan, Istria, Croatia, specialising in early diagnostics and prevention of malignant diseases through ultrasound, colour Doppler, and cytological diagnostics.
+
+## About
+
+Poliklinika Jelovac is run by dr. med. Nedjeljko Jelovac and has been operating since 1991. The clinic specialises in detecting very small tumour formations (from 3 mm) using ultrasound-guided puncture and cytological (microscopic) diagnosis. The goal is to identify and treat disease at the earliest stage, when outcomes are most successful.
+
+Services include:
+- Ultrasound diagnostics (abdominal, breast)
+- Colour Doppler vascular diagnostics
+- Cytological diagnostics via ultrasound-guided puncture
+- Systematic preventive check-ups (clinical examination, ECG, laboratory, ultrasound)
+- General medicine and specialist consultations
+
+## Contact
+
+- Phone: {{ site.phone }}
+- Mobile: {{ site.mobile }}
+- Address: {{ site.address }}
+- Working hours: Monday & Wednesday 15:00–19:00 / Tuesday, Thursday & Friday 08:00–13:00
+
+## Pages
+
+- Croatian homepage: /hr/
+- English homepage: /en/
+- Services (HR): /hr/services/
+- Services (EN): /en/services/
+- Contact (HR): /hr/contact/
+- Contact (EN): /en/contact/
+- About (HR): /hr/about/
+- About (EN): /en/about/
