@@ -5,11 +5,13 @@ lang: en
 permalink: /en/
 ---
 
-<h1>Welcome to Polyclinic Jelovac</h1>
-
-<p>Your trusted healthcare provider in the community. We provide quality healthcare and professional service to all our patients.</p>
-
-
+<div class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Polyclinic Jelovac</h1>
+        <p>Your trusted healthcare provider in the community. We provide quality healthcare and professional service to all our patients.</p>
+        <a href="/en/contact/" class="btn-outline">Contact Us</a>
+    </div>
+</div>
 
 <div class="home-services">
     <div>
@@ -29,7 +31,5 @@ permalink: /en/
         <img src="{{ '/assets/images/dr-jelovac-1.jpg' | relative_url }}" alt="Dr. Nedjeljko Jelovac">
     </div>
 </div>
-
-
 
 {% include contact-section.html %}
