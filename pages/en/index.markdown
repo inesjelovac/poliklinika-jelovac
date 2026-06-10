@@ -9,8 +9,8 @@ permalink: /en/
     <div class="hero-content">
         <h1>Welcome to Polyclinic Jelovac</h1>
         <p>Your trusted healthcare provider in the community. We provide quality healthcare and professional service to all our patients.</p>
-        <a href="/en/contact/" class="btn-outline">Contact Us</a>
     </div>
+    <a href="/en/contact/" class="btn-outline">Contact Us</a>
 </div>
 
 <div class="home-services">
